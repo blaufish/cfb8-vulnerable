@@ -62,10 +62,8 @@ public class CFB8Vulnerable {
 	}
 
 	private static void shift8(byte[] s, byte lsb) {
-		for (int i = 1; i < s.length; i++)
-			s[i] = s[i - 1];
-		s[0] = lsb;
-
+		System.arraycopy(s, 1, s, 0, s.length-1);
+		s[s.length-1] = lsb;
 	}
 
 	public static void main(String[] args) throws Exception {
