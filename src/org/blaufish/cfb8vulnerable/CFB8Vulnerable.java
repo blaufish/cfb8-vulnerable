@@ -76,7 +76,7 @@ public class CFB8Vulnerable {
 			SecretKey secretKey = keyGen.generateKey();
 			System.out.printf("Key = %s\n", bytesToHex(secretKey.getEncoded()));
 			if (cfb8iv0plaintext0(secretKey)) {
-				System.out.printf("Netlogon CFB8 considered harmful vulnerability found - after testing %d keys, with IV=0, P=0 on a random key, C=0 due to S stuck at S=0\n", counter);
+				System.out.printf("MNetlogon CFB8 considered harmful vulnerability found - after testing %d keys, with IV=0, P=0 on a random key, C=0 due to S stuck at S=0\n", counter);
 				return;
 			}
 		}
